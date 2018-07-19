@@ -1,0 +1,1 @@
+crtg_content = ''; (function(){document.cookie = 'crtg_scripps=' + escape(crtg_content) + '; path=/; expires=Tue, 17 May 2016 11:53:37 GMT; domain=foodnetwork.com';})();

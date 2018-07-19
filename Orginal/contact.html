@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>iCook</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+        <style>
+            .container-fluid{
+                margin: 0px;
+                width: 100%;
+            }
+            #navi{
+                height: 60px;
+            }
+            #login{
+                background:transparent ;
+                border: 0px;
+            }
+            #profilePic{
+                max-width:700px;
+            }
+            .modal-content{
+                background-color: transparent;
+            }
+            .modal-content .modal-header{
+                background-color:crimson;
+                color: white;
+                text-align: center;
+            }
+            .modal-content .modal-body{
+                background-color: transparent;
+                color: cornsilk;
+
+            }
+            #register label, #login label{
+                margin: 5px 10px;
+                margin-right: 50px;
+                font-family: cursive;
+                font-style: normal;
+                font-weight: 100;
+            }
+
+            #register input, #login input{
+                color: darkgray;
+                font-style: italic;
+                position: fixed;
+                left: 150px;
+                border: 0px;
+                padding-left: 5px;
+                font-family: arial;
+                font-size: 14px;
+            }
+            #register form>#submit{
+                border: 0pc;
+                background-color: transparent;
+                border: 1px solid cornsilk;
+                color: cornsilk;
+                width: 60px;
+                height: 35px;
+                border-radius: 5px;
+                position: fixed;
+                top:265px;
+                left: 100px;
+            }
+
+            #login form>#submit{
+                border: 0pc;
+                background-color: transparent;
+                border: 1px solid cornsilk;
+                color: cornsilk;
+                width: 60px;
+                height: 35px;
+                border-radius: 5px;
+                position: fixed;
+                top:165px;
+                left: 100px;
+            }
+
+            #login form>#submit3{
+                border: 0pc;
+                background-color: transparent;
+                border: 1px solid cornsilk;
+                color: cornsilk;
+                width: 60px;
+                height: 35px;
+                border-radius: 5px;
+                position: fixed;
+                top:530px;
+                left: 30px;
+                z-index: 100;
+            }
+            #login textarea{
+                color: darkgrey;
+            }
+            .modal-footer button{
+                background-color: transparent;
+                border: 1px solid cornsilk;
+                color: cornsilk;
+            }
+            #login form>#submit:hover, #login form>#submit3:hover, #search #submit2:hover,  #register form>#submit:hover{
+                background-color: darkgrey;
+            }
+            .navbar-inverse{
+                font-family: cursive;
+
+                font-size: 16px;
+            }
+            #search label{
+                margin: 5px 10px;
+            }
+            #search #submit2{
+                border: 0pc;
+                background-color: transparent;
+                border: 1px solid cornsilk;
+                color: cornsilk;
+                width: 60px;
+                height: 35px;
+                border-radius: 5px;
+                position: fixed;
+                font-size: 14px;
+                top:160px;
+                left: 150px;
+            }
+            #search input{
+                color: darkgrey;
+                font-size: 13px;
+                font-family: arial;
+                font-style: italic;
+                border: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="first.html">iCook</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="learn.html">Learn Cooking</a></li>
+                    <li> <a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a> </li>
+                    <li><a href="http://www.coca-cola.com/global/glp.html" ><span class="glyphicon glyphicon-log-in" ></span>CocaCola</a> </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="#"><span class="glyphicon glyphicon-user" ></span><button id="login" type="button" data-toggle="modal" data-target="#myModal2">Sign Up </button></a> </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in" ></span><button id="login" type="button" data-toggle="modal" data-target="#myModal">Login </button></a> </li>
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Log in</h4>
+                                </div>
+                                <div class="modal-body" id="login">
+                                    <form>
+                                        <label>User name:</label><input type="text" size="60px" required placeholder="username"><br>
+                                        <label>Password:</label><input type=text size="60px" required placeholder="password"><br>
+                                        <input type="submit" value="Log in" id="submit">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="myModal3" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Contribution</h4>
+                                </div>
+                                <div class="modal-body" id="login">
+                                    <form>
+                                        <label>Your email: </label><input type="text" required placeholder="your email..." size="40px";><br>
+                                        <label>Your comment: </label><textarea cols="67" rows="15"></textarea>
+                                        <input type="submit" value="Submit" id="submit3">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id="myModal4" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Search</h4>
+                                </div>
+                                <div class="modal-body" id="search">
+                                    <form>
+                                        <label>Search for:</label><input type="text" required placeholder="every thing you want to look for..." size="90px;">
+                                        <input type="submit" value="Search" id="submit2">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div id="myModal2" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="font-family:fantasy">Registration</h4>
+                                </div>
+                                <div class="modal-body" id="register">
+                                    <form>
+                                        <label>Full name:</label><input type="text" size="60px" placeholder=" Full name"><br>
+                                        <label>Nationality:</label><input type="text" size="60px" placeholder="Nationality"><br>
+                                        <label>Email: </label><input required type="text" size="60px" placeholder="Email"><br>
+                                        <label>User name:</label><input type="text" size="60px" required placeholder="username"><br>
+                                        <label>Password:</label><input type=text size="60px" required placeholder="password"><br>
+                                        <input type="submit" value="Enroll" id="submit">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <h2>Developer's Curriculum Vitae</h2>
+            <p><strong>Slogan:</strong> iCook. The creative cooking - The fantastic enjoying.</p>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Personal information</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">Full name: Lý Tấn Lợi<br>
+                            Date of birth: 01.29.1996<br>Nationality: Vietnam</div>
+                    </div>
+                </div>
+                <div class="panel panel-succcess">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Job</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">Hello everyone, I'm Kingsley. Now, I am a sophomore at FPT University - Ho Chi Mih City Campus. My major is software engineering.<br><br>
+                            Future direction: I wanna be a global citizen, working as an independent developer</div>
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">How to contact me?</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">My email address: tuithanhcong96@gmail.com/lytanloi9@gmail.com<br>
+                            My phone number: 01207670071<br>
+                            My facebook: www.facebook.com/loi.lytan<br>
+                            Address:Room 503/B1, Vietnam National University Dormitory B, Dong Hoa Wave, Di An Town, Binh Duong Province</div>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Profile Picture</a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body"><img src="picture/pro.jpg" id="profilePic"></div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+
+
+
+
+
+
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom" id="navi">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">iCook -<br> <small><i>I can cook - You can cook</i></small></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Linking Website 
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.foody.vn">Foody</a></li>
+                            <li><a href="https://www.phuot.vn">PhuotVn</a></li>
+                            <li><a href="https://www.tiki.vn">Tiki</a></li> 
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Social Network
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.facebook.com/loi.lytan">Facebook</a> </li>
+                            <li><a href="http://www.twitter.com/lytanloi96">Twitter</a> </li>
+                            <li><a href="https://plus.google.com/105793945970872149495/posts">Google+</a> </li>
+                            <li><a href="https://www.weibo.com">Weibo</a> </li>
+                        </ul>
+                    </li> 
+                    <li><a href="#"><span class="glyphicon glyphicon-donate" ></span><button id="login" type="button" data-toggle="modal" data-target="#myModal3">Contribution</button></a> </li>
+
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-search" ></span><button id="login" type="button" data-toggle="modal" data-target="#myModal4">Search</button></a> </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </body>
+</html>

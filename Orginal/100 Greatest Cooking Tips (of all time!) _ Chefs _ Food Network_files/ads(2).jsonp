@@ -1,0 +1,16 @@
+rp_ad_response={
+"status":"ok",
+"account_id":11166,
+"site_id":51432,
+"zone_id":231718,
+"size_id":55,
+"tracking":"",
+"inventory":{"Sponsorship":"fn11_helparoundthekitchen","resize":"970x90"},
+"ads":[{
+"status":"no-ads",
+"reason":"floor-not-met",
+"error_code":"10",
+"impression_id":"2559e0bf-577f-4bc2-a440-e396be4c4521"
+}]
+};
+try{rp_onAdResponseLoaded(rp_ad_response);}catch(ignore){}

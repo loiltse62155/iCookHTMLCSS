@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pop-up</title>
+	<style type="text/css">
+       #popup {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			height: 640px;
+			margin: 0 auto;
+			background-color: rgba(30,30,30,0.9);
+			display:none;
+            animation-name: fade;
+            animation-duration: 2s;
+		}
+        @-webkit-keyframes fade {
+    from{opacity: 0};
+    to{opacity: 1}
+}
+
+@keyframes fade {
+    from{opacity: 0};
+    to{opacity: 1}
+} @-webkit-keyframes fade2 {
+    from{opacity: 1};
+    to{opacity: 0}
+}
+
+@keyframes fade2 {
+    from{opacity: 1};
+    to{opacity: 0}
+}
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			float:left;
+		}
+		li > a {
+			text-decoration: none;
+			width: 100px;
+			height: 40px;
+			margin: 10px;
+		}
+		iframe {
+			width: 90%;
+			height: 90%;
+			border: 1px solid black;
+			background-color: white;
+			position: absolute;
+			top: 5%;
+			left: 5%;
+
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+            <li><a href="Popup.html" target="pop" onclick="show(this);"><img src="picture/dayNau/a56eec5848b12775f9562ae5f41d9a77.jpg"></a></li>
+			<li><a href="Lab2.html" target="pop" onclick="show(this);">Link 2</a></li>
+			<li><a href="Lab3.html" target="pop" onclick="show(this);">Link 3</a></li>
+			<li><a href="Lab4.html" target="pop" onclick="show(this);">Link 4</a></li>
+			<li><a href="Lab5.html" target="pop" onclick="show(this);">Link 5</a></li>
+		</ul>
+	</nav>
+	<div id="popup" onclick="hide(this);">
+		<iframe src="" name="pop"></iframe>
+	</div>
+	<script type="text/javascript">
+		var d = document;
+		function show(a) {
+			var s = d.getElementById('popup');
+			s.style.display = 'block';
+			
+		}
+
+		function hide(a) {
+			a.style.display = 'none';
+		}
+
+	</script>
+</body>
+</html>

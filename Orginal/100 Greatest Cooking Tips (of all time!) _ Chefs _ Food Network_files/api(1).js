@@ -1,0 +1,1 @@
+document.write('<a href="http://services.hearstmags.com/ams/amsClick?pos_id=774&campaign_id=976&creative_id=26776&site_id=60&top_level_section_prefix=ams&full_url=/ams/api.js"  target="_blank" ><img src="//subscribe.hearstmags.com/circulation/shared/ads/fnm_300x300_10kFF_kitchen_04.jpg">\n</a>\n\n');

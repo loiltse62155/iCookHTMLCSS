@@ -1,0 +1,5 @@
+(function(w,d){'use strict';var s1=d.getElementsByTagName('script')[0],s=d.createElement('script'),types,attr,pageFn,onReady;types={'website':true,'article':true,'video.other':true};attr=function(domQ,name){var l=document.querySelector(domQ);if(l){return l.getAttribute(name);}
+return undefined;};pageFn=function(){var ogtype=attr('meta[property="og:type"]','content');if(w.TRUE_ANTHEM.isValidPageType(ogtype)||types[ogtype]){return{'canonical':attr('link[rel="canonical"]','href'),'og:type':'article','og:url':attr('meta[property="og:url"]','content')};}
+return{};};s.src='//tru.am/scripts/ta-pagesocial-sdk.js';onReady=function(){var l=document.location,h=l.hostname.toLowerCase(),cid;if(h.indexOf('food.com')>-1){cid='646';}
+if(cid){w.TRUE_ANTHEM.configure(cid,{page:pageFn});}};if(s.addEventListener){s.addEventListener('load',onReady,false);}else{s.onreadystatechange=function(){if(s.readyState in{loaded:1,complete:1}){s.onreadystatechange=null;onReady();}};}
+s1.parentNode.insertBefore(s,s1);}(window,document));
